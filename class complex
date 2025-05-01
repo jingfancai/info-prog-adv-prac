@@ -1,0 +1,35 @@
+class Complex:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+
+    def __add__(self, operand):
+        new_a = self.a + operand.a
+        new_b = self.b + operand.b
+        return Complex(new_a, new_b)
+
+    def __str__(self):
+        return f"{self.a} + {self.b}i"
+
+A = Complex(7, 1)
+B = Complex(2, 6)
+C = A + B
+print(C)
+
+class Complex:
+    def __init__(self, d, e):
+        self.d = d
+        self.e = e
+
+    def __sub__(self, operand):
+        new_d = self.d - operand.d
+        new_e = self.e - operand.e
+        return Complex(new_d, new_e)
+
+    def __str__(self):
+        return f"{self.d} + {self.e}i"
+
+D = Complex(7, 1)
+E = Complex(2, 6)
+F = D - E
+print(F)
